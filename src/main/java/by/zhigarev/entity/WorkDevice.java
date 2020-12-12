@@ -5,17 +5,13 @@ import java.util.Scanner;
 
 public class WorkDevice implements ElectroDevice {
     private double batteryCapacity;
-    private int memoryRom;
-    private int displayInches;
+    private double memoryRom;
+    private double displayInches;
 
-    public WorkDevice() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("enter batteryCapacity:");
-        batteryCapacity = scanner.nextDouble();
-        System.out.print("enter memoryRom:");
-        memoryRom = scanner.nextInt();
-        System.out.print("enter displayInches:");
-        displayInches = scanner.nextInt();
+    public WorkDevice(double batteryCapacity, double memoryRom, double displayInches) {
+        this.batteryCapacity = batteryCapacity;
+        this.memoryRom = memoryRom;
+        this.displayInches = displayInches;
     }
 
     public double getBatteryCapacity() {
@@ -26,19 +22,19 @@ public class WorkDevice implements ElectroDevice {
         this.batteryCapacity = batteryCapacity;
     }
 
-    public int getMemoryRom() {
+    public double getMemoryRom() {
         return memoryRom;
     }
 
-    public void setMemoryRom(int memoryRom) {
+    public void setMemoryRom(double memoryRom) {
         this.memoryRom = memoryRom;
     }
 
-    public int getDisplayInches() {
+    public double getDisplayInches() {
         return displayInches;
     }
 
-    public void setDisplayInches(int displayInchs) {
+    public void setDisplayInches(double displayInchs) {
         this.displayInches = displayInchs;
     }
 

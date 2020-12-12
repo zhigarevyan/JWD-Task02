@@ -13,26 +13,13 @@ public class VacuumCleaner extends HomeDevice {
     private double motorSpeedRegulation;
     private double cleaningWidth;
 
-    public VacuumCleaner() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter type: \n0 - A\n1 - B\n3 - C");
-        switch (scanner.nextInt()) {
-            case 0:
-                filterType = FilterType.A;
-                break;
-            case 1:
-                filterType = FilterType.B;
-                break;
-            case 3:
-                filterType = FilterType.C;
-                break;
-        }
-        System.out.println("Enter bagType(TEXT)");
-        bagType = scanner.next();
-        System.out.println("Enter motorSpeedRegulation");
-        motorSpeedRegulation = scanner.nextDouble();
-        System.out.println("Enter cleaningWidth");
-        cleaningWidth = scanner.nextDouble();
+    public VacuumCleaner(double powerConsumption, FilterType filterType, String bagType, String wandType, double motorSpeedRegulation, double cleaningWidth) {
+        super(powerConsumption);
+        this.filterType = filterType;
+        this.bagType = bagType;
+        this.wandType = wandType;
+        this.motorSpeedRegulation = motorSpeedRegulation;
+        this.cleaningWidth = cleaningWidth;
     }
 
     public FilterType getFilterType() {

@@ -5,10 +5,8 @@ import java.util.Scanner;
 public class HomeDevice implements ElectroDevice {
     double powerConsumption;
 
-    public HomeDevice() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter powerConsumption");
-        powerConsumption = scanner.nextDouble();
+    public HomeDevice(double powerConsumption) {
+        this.powerConsumption = powerConsumption;
     }
 
     public double getPowerConsumption() {

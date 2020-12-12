@@ -1,25 +1,19 @@
 package by.zhigarev.entity.implementation;
 
 import by.zhigarev.entity.HomeDevice;
+import by.zhigarev.entity.KitchenDevice;
 
 import java.util.Scanner;
 
-public class Refrigerator extends HomeDevice {
+public class Refrigerator extends KitchenDevice {
     private double freezerCapacity;
     private double overallCapacity;
 
-
-
-    public Refrigerator() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter freezerCapacity");
-        freezerCapacity = scanner.nextDouble();
-        System.out.println("Enter overallCapacity");
-        overallCapacity = scanner.nextDouble();
+    public Refrigerator(double powerConsumption, double weight, double width, double height, double freezerCapacity, double overallCapacity) {
+        super(powerConsumption, weight, width, height);
+        this.freezerCapacity = freezerCapacity;
+        this.overallCapacity = overallCapacity;
     }
-
-
-
 
     public double getFreezerCapacity() {
         return freezerCapacity;

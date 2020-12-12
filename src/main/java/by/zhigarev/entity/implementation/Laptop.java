@@ -11,24 +11,11 @@ public class Laptop extends WorkDevice {
     private double systemMemory;
     private double cpu;
 
-    public Laptop() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter OS: \n0 - Linux\n1 - Windows\n3 - MacOS");
-        switch (scanner.nextInt()){
-            case 0:
-                os = Os.Linux;
-                break;
-            case 1:
-                os = Os.Windows;
-                break;
-            case 3:
-                os = Os.MacOs;
-                break;
-        }
-        System.out.println("Enter systemMemory");
-        systemMemory = scanner.nextInt();
-        System.out.println("Enter cpu");
-        cpu = scanner.nextDouble();
+    public Laptop(double batteryCapacity, double memoryRom, double displayInches, Os os, double systemMemory, double cpu) {
+        super(batteryCapacity, memoryRom, displayInches);
+        this.os = os;
+        this.systemMemory = systemMemory;
+        this.cpu = cpu;
     }
 
     public Os getOs() {

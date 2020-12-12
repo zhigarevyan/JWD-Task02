@@ -7,14 +7,11 @@ public class KitchenDevice extends HomeDevice{
     private double width;
     private double height;
 
-    public KitchenDevice() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter Weight");
-        weight = scanner.nextDouble();
-        System.out.println("Enter Width");
-        width = scanner.nextDouble();
-        System.out.println("Enter height");
-        height = scanner.nextDouble();
+    public KitchenDevice(double powerConsumption, double weight, double width, double height) {
+        super(powerConsumption);
+        this.weight = weight;
+        this.width = width;
+        this.height = height;
     }
 
     public double getWeight() {

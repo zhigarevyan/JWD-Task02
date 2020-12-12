@@ -9,15 +9,11 @@ public class Oven extends KitchenDevice {
     private double capacity;
     private double depth;
 
-    public Oven() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter capacity");
-        capacity = scanner.nextDouble();
-        System.out.println("Enter depth");
-        depth = scanner.nextDouble();
+    public Oven(double powerConsumption, double weight, double width, double height, double capacity, double depth) {
+        super(powerConsumption, weight, width, height);
+        this.capacity = capacity;
+        this.depth = depth;
     }
-
-
 
     public double getCapacity() {
         return capacity;

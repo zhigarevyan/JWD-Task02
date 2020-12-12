@@ -10,16 +10,12 @@ public class Speakers extends HomeDevice {
     private double frequencyMax;
     private double cordLength;
 
-    public Speakers() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter numberOfSpeakers");
-        numberOfSpeakers = scanner.nextDouble();
-        System.out.println("Enter frequencyMin");
-        frequencyMin = scanner.nextDouble();
-        System.out.println("Enter frequencyMax");
-        frequencyMax = scanner.nextDouble();
-        System.out.println("Enter cordLength");
-        cordLength = scanner.nextDouble();
+    public Speakers(double powerConsumption, double numberOfSpeakers, double frequencyMin, double frequencyMax, double cordLength) {
+        super(powerConsumption);
+        this.numberOfSpeakers = numberOfSpeakers;
+        this.frequencyMin = frequencyMin;
+        this.frequencyMax = frequencyMax;
+        this.cordLength = cordLength;
     }
 
     public double getNumberOfSpeakers() {
