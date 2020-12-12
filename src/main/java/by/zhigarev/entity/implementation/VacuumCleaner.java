@@ -3,62 +3,59 @@ package by.zhigarev.entity.implementation;
 import by.zhigarev.entity.enums.FilterType;
 import by.zhigarev.entity.HomeDevice;
 
-
-import java.util.Scanner;
-
 public class VacuumCleaner extends HomeDevice {
-    private FilterType filterType;
-    private String bagType;
-    private String wandType = "build-in";
-    private double motorSpeedRegulation;
-    private double cleaningWidth;
+    private FilterType filter_type;
+    private String bag_type;
+    private String wand_type = "build-in";
+    private double motor_speed_regulation;
+    private double cleaning_width;
 
-    public VacuumCleaner(double powerConsumption, FilterType filterType, String bagType, String wandType, double motorSpeedRegulation, double cleaningWidth) {
+    public VacuumCleaner(double powerConsumption, FilterType filter_type, String bag_type, String wand_type, double motor_speed_regulation, double cleaning_width) {
         super(powerConsumption);
-        this.filterType = filterType;
-        this.bagType = bagType;
-        this.wandType = wandType;
-        this.motorSpeedRegulation = motorSpeedRegulation;
-        this.cleaningWidth = cleaningWidth;
+        this.filter_type = filter_type;
+        this.bag_type = bag_type;
+        this.wand_type = wand_type;
+        this.motor_speed_regulation = motor_speed_regulation;
+        this.cleaning_width = cleaning_width;
     }
 
-    public FilterType getFilterType() {
-        return filterType;
+    public FilterType getFilter_type() {
+        return filter_type;
     }
 
-    public void setFilterType(FilterType filterType) {
-        this.filterType = filterType;
+    public void setFilter_type(FilterType filter_type) {
+        this.filter_type = filter_type;
     }
 
-    public String getBagType() {
-        return bagType;
+    public String getBag_type() {
+        return bag_type;
     }
 
-    public void setBagType(String bagType) {
-        this.bagType = bagType;
+    public void setBag_type(String bag_type) {
+        this.bag_type = bag_type;
     }
 
-    public String getWandType() {
-        return wandType;
+    public String getWand_type() {
+        return wand_type;
     }
 
-    public void setWandType(String wandType) {
-        this.wandType = wandType;
+    public void setWand_type(String wand_type) {
+        this.wand_type = wand_type;
     }
 
-    public double getMotorSpeedRegulation() {
-        return motorSpeedRegulation;
+    public double getMotor_speed_regulation() {
+        return motor_speed_regulation;
     }
 
-    public void setMotorSpeedRegulation(double motorSpeedRegulation) {
-        this.motorSpeedRegulation = motorSpeedRegulation;
+    public void setMotor_speed_regulation(double motor_speed_regulation) {
+        this.motor_speed_regulation = motor_speed_regulation;
     }
 
-    public double getCleaningWidth() {
-        return cleaningWidth;
+    public double getCleaning_width() {
+        return cleaning_width;
     }
 
-    public void setCleaningWidth(double cleaningWidth) {
-        this.cleaningWidth = cleaningWidth;
+    public void setCleaning_width(double cleaning_width) {
+        this.cleaning_width = cleaning_width;
     }
 }

@@ -1,19 +1,17 @@
 package by.zhigarev.entity;
 
-import java.util.Scanner;
-
 public class HomeDevice implements ElectroDevice {
-    double powerConsumption;
+    double power_consumption;
 
-    public HomeDevice(double powerConsumption) {
-        this.powerConsumption = powerConsumption;
+    public HomeDevice(double power_consumption) {
+        this.power_consumption = power_consumption;
     }
 
-    public double getPowerConsumption() {
-        return powerConsumption;
+    public double getPower_consumption() {
+        return power_consumption;
     }
 
-    public void setPowerConsumption(double powerConsumption) {
-        this.powerConsumption = powerConsumption;
+    public void setPower_consumption(double power_consumption) {
+        this.power_consumption = power_consumption;
     }
 }

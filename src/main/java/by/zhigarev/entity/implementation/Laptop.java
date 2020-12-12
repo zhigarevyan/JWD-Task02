@@ -2,19 +2,16 @@ package by.zhigarev.entity.implementation;
 
 import by.zhigarev.entity.enums.Os;
 import by.zhigarev.entity.WorkDevice;
-import by.zhigarev.entity.enums.TypesOfDevice;
-
-import java.util.Scanner;
 
 public class Laptop extends WorkDevice {
     private Os os;
-    private double systemMemory;
+    private double system_memory;
     private double cpu;
 
-    public Laptop(double batteryCapacity, double memoryRom, double displayInches, Os os, double systemMemory, double cpu) {
+    public Laptop(double batteryCapacity, double memoryRom, double displayInches, Os os, double system_memory, double cpu) {
         super(batteryCapacity, memoryRom, displayInches);
         this.os = os;
-        this.systemMemory = systemMemory;
+        this.system_memory = system_memory;
         this.cpu = cpu;
     }
 
@@ -26,12 +23,12 @@ public class Laptop extends WorkDevice {
         this.os = os;
     }
 
-    public double getSystemMemory() {
-        return systemMemory;
+    public double getSystem_memory() {
+        return system_memory;
     }
 
-    public void setSystemMemory(double systemMemory) {
-        this.systemMemory = systemMemory;
+    public void setSystem_memory(double system_memory) {
+        this.system_memory = system_memory;
     }
 
     public double getCpu() {
@@ -46,7 +43,7 @@ public class Laptop extends WorkDevice {
     public String toString() {
         return "Laptop{" +
                 "os=" + os +
-                ", systemMemory=" + systemMemory +
+                ", systemMemory=" + system_memory +
                 ", cpu=" + cpu +
                 '}';
     }
