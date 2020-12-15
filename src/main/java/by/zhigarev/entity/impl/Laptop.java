@@ -1,25 +1,26 @@
-package by.zhigarev.entity.implementation;
+package by.zhigarev.entity.impl;
 
-import by.zhigarev.entity.enums.Os;
 import by.zhigarev.entity.WorkDevice;
 
+import java.io.Serializable;
+
 public class Laptop extends WorkDevice {
-    private Os os;
+    private String os;
     private double system_memory;
     private double cpu;
 
-    public Laptop(double batteryCapacity, double memoryRom, double displayInches, Os os, double system_memory, double cpu) {
+    public Laptop(double batteryCapacity, double memoryRom, double displayInches, String os, double system_memory, double cpu) {
         super(batteryCapacity, memoryRom, displayInches);
         this.os = os;
         this.system_memory = system_memory;
         this.cpu = cpu;
     }
 
-    public Os getOs() {
+    public String getOs() {
         return os;
     }
 
-    public void setOs(Os os) {
+    public void setOs(String os) {
         this.os = os;
     }
 
@@ -45,6 +46,9 @@ public class Laptop extends WorkDevice {
                 "os=" + os +
                 ", systemMemory=" + system_memory +
                 ", cpu=" + cpu +
+                ", battery capacity=" + super.getBattery_capacity() +
+                ", displayInches=" + super.getDisplay_inches() +
+                ", MemoryRom=" + super.getMemory_rom() +
                 '}';
     }
 }

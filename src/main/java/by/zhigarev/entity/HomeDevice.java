@@ -14,4 +14,11 @@ public class HomeDevice implements ElectroDevice {
     public void setPower_consumption(double power_consumption) {
         this.power_consumption = power_consumption;
     }
+
+    @Override
+    public String toString() {
+        return "HomeDevice{" +
+                "power_consumption=" + power_consumption +
+                '}';
+    }
 }

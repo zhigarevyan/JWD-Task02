@@ -1,4 +1,4 @@
-package by.zhigarev.entity.implementation;
+package by.zhigarev.entity.impl;
 
 import by.zhigarev.entity.KitchenDevice;
 
@@ -28,5 +28,12 @@ public class Refrigerator extends KitchenDevice {
         this.overall_capacity = overall_capacity;
     }
 
-
+    @Override
+    public String toString() {
+        return "Refrigerator{" +
+                "freezer_capacity=" + freezer_capacity +
+                ", overall_capacity=" + overall_capacity +
+                super.toString()+
+                '}';
+    }
 }

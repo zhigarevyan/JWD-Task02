@@ -1,9 +1,6 @@
-package by.zhigarev.entity.implementation;
+package by.zhigarev.entity.impl;
 
-import by.zhigarev.entity.HomeDevice;
 import by.zhigarev.entity.KitchenDevice;
-
-import java.util.Scanner;
 
 public class Oven extends KitchenDevice {
     private double capacity;
@@ -31,5 +28,15 @@ public class Oven extends KitchenDevice {
         this.depth = depth;
     }
 
-
+    @Override
+    public String toString() {
+        return "Oven{" +
+                "capacity=" + capacity +
+                ", depth=" + depth +
+                ", height=" + super.getHeight() +
+                ", powerConsumption=" + super.getPower_consumption() +
+                ", weight=" + super.getWeight() +
+                ", width=" + super.getWidth() +
+                '}';
+    }
 }

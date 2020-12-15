@@ -37,4 +37,14 @@ public class KitchenDevice extends HomeDevice{
     public void setHeight(double height) {
         this.height = height;
     }
+
+    @Override
+    public String toString() {
+        return "KitchenDevice{" +
+                "weight=" + weight +
+                ", width=" + width +
+                ", height=" + height +
+                ", power_consumption=" + power_consumption +
+                '}';
+    }
 }

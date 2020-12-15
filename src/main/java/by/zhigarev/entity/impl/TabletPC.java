@@ -1,4 +1,4 @@
-package by.zhigarev.entity.implementation;
+package by.zhigarev.entity.impl;
 
 import by.zhigarev.entity.WorkDevice;
 
@@ -6,9 +6,9 @@ import java.awt.*;
 
 public class TabletPC extends WorkDevice {
     private double flash_memory_capacity;
-    private Color color;
+    private String color;
 
-    public TabletPC(double batteryCapacity, double memoryRom, double displayInches, double flash_memory_capacity, Color color) {
+    public TabletPC(double batteryCapacity, double memoryRom, double displayInches, double flash_memory_capacity, String color) {
         super(batteryCapacity, memoryRom, displayInches);
         this.flash_memory_capacity = flash_memory_capacity;
         this.color = color;
@@ -22,11 +22,20 @@ public class TabletPC extends WorkDevice {
         this.flash_memory_capacity = flash_memory_capacity;
     }
 
-    public Color getColor() {
+    public String getColor() {
         return color;
     }
 
-    public void setColor(Color color) {
+    public void setColor(String color) {
         this.color = color;
+    }
+
+    @Override
+    public String toString() {
+        return "TabletPC{" +
+                "flash_memory_capacity=" + flash_memory_capacity +
+                ", color='" + color + '\'' +
+                super.toString()+
+                '}';
     }
 }

@@ -1,4 +1,4 @@
-package by.zhigarev.entity.implementation;
+package by.zhigarev.entity.impl;
 
 import by.zhigarev.entity.HomeDevice;
 
@@ -37,5 +37,15 @@ public class Speakers extends HomeDevice {
 
     public void setCord_length(double cord_length) {
         this.cord_length = cord_length;
+    }
+
+    @Override
+    public String toString() {
+        return "Speakers{" +
+                "number_of_speakers=" + number_of_speakers +
+                ", frequency_range='" + frequency_range + '\'' +
+                ", cord_length=" + cord_length +
+                super.toString()+
+                '}';
     }
 }
