@@ -1,6 +1,6 @@
 package by.zhigarev.entity;
 
-public class WorkDevice implements ElectroDevice {
+public class WorkDevice implements Appliance {
     private double battery_capacity;
     private double memory_rom;
     private double display_inches;

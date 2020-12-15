@@ -1,11 +1,11 @@
 package by.zhigarev.main;
 
-import by.zhigarev.entity.ElectroDevice;
+import by.zhigarev.entity.Appliance;
 import by.zhigarev.entity.criteria.Criteria;
 import by.zhigarev.entity.criteria.SearchCriteria;
 import by.zhigarev.entity.impl.Oven;
 import by.zhigarev.entity.impl.TabletPC;
-import by.zhigarev.service.ElectroDeviceService;
+import by.zhigarev.service.ApplianceService;
 import by.zhigarev.service.ServiceFactory;
 
 import java.util.List;
@@ -13,10 +13,10 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        List<ElectroDevice> appliance;
+        List<Appliance> appliance;
 
         ServiceFactory factory = ServiceFactory.getInstance();
-        ElectroDeviceService  service = factory.getApplianceService();
+        ApplianceService service = factory.getApplianceService();
 
         //////////////////////////////////////////////////////////////////
 
@@ -25,7 +25,7 @@ public class Main {
 
         appliance = service.find(criteriaOven);
 
-        for(ElectroDevice e : appliance){
+        for(Appliance e : appliance){
             System.out.println(e);
         }
 
@@ -38,7 +38,7 @@ public class Main {
 
         appliance = service.find(criteriaOven);
 
-        for(ElectroDevice e : appliance){
+        for(Appliance e : appliance){
             System.out.println(e);
         }
 
@@ -51,7 +51,7 @@ public class Main {
 
         appliance = service.find(criteriaTabletPC);// find(Object...obj)
 
-        for(ElectroDevice e : appliance){
+        for(Appliance e : appliance){
             System.out.println(e);
         }
     }

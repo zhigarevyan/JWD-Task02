@@ -8,8 +8,8 @@ import java.util.HashMap;
 public class Factory {
 
 
-    public ElectroDevice getElectroDevice(TypesOfDevice type, HashMap<String, Object> params) {
-        ElectroDevice returnValue = null;
+    public Appliance getElectroDevice(TypesOfDevice type, HashMap<String, Object> params) {
+        Appliance returnValue = null;
         switch (type) {
             case Laptop:
                 returnValue = new Laptop(

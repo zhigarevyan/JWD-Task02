@@ -1,27 +1,27 @@
 package by.zhigarev.service.impl;
 
 import by.zhigarev.dao.DAOFactory;
-import by.zhigarev.dao.ElectroDeviceDAO;
-import by.zhigarev.entity.ElectroDevice;
+import by.zhigarev.dao.AppliaceDAO;
+import by.zhigarev.entity.Appliance;
 import by.zhigarev.entity.criteria.Criteria;
-import by.zhigarev.service.ElectroDeviceService;
+import by.zhigarev.service.ApplianceService;
 import by.zhigarev.service.validation.Validator;
 
 import java.io.IOException;
 import java.util.List;
 
-public class ElectroDeviceServiceImpl implements ElectroDeviceService {
+public class ApplianceServiceImpl implements ApplianceService {
 
     @Override
-    public List<ElectroDevice> find(Criteria criteria) {
+    public List<Appliance> find(Criteria criteria) {
         if (!Validator.criteriaValidator(criteria)) {
             return null;
         }
 
         DAOFactory factory = DAOFactory.getInstance();
-        ElectroDeviceDAO applianceDAO = factory.getApplianceDAO();
+        AppliaceDAO applianceDAO = factory.getApplianceDAO();
 
-        List<ElectroDevice> appliance = null;
+        List<Appliance> appliance = null;
         try {
             appliance = applianceDAO.find(criteria);
         } catch (IOException e) {

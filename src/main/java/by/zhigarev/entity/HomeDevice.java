@@ -1,6 +1,6 @@
 package by.zhigarev.entity;
 
-public class HomeDevice implements ElectroDevice {
+public class HomeDevice implements Appliance {
     double power_consumption;
 
     public HomeDevice(double power_consumption) {

@@ -1,34 +1,31 @@
 package by.zhigarev.dao.impl;
 
-import by.zhigarev.dao.ElectroDeviceDAO;
-import by.zhigarev.entity.ElectroDevice;
+import by.zhigarev.dao.AppliaceDAO;
+import by.zhigarev.entity.Appliance;
 import by.zhigarev.entity.Factory;
 import by.zhigarev.entity.criteria.Criteria;
-import by.zhigarev.entity.criteria.SearchCriteria;
 import by.zhigarev.entity.enums.TypesOfDevice;
-import by.zhigarev.entity.impl.Laptop;
-import by.zhigarev.entity.impl.Oven;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class ElectroDeviceDAOImpl implements ElectroDeviceDAO {
+public class AppliaceDAOImpl implements AppliaceDAO {
     private final String filePath = "appliances_db.txt";
     private BufferedReader reader;
     private Factory factory;
 
-    public ElectroDeviceDAOImpl() {
+    public AppliaceDAOImpl() {
         factory = new Factory();
     }
 
     @Override
-    public List<ElectroDevice> find(Criteria criteria) throws IOException {
-        List<ElectroDevice> devices = new ArrayList<>();
+    public List<Appliance> find(Criteria criteria) throws IOException {
+        List<Appliance> devices = new ArrayList<>();
         List<HashMap<String, Object>> listOfElectroDevicesParams = getListOfElectroDevices(criteria);
         for(HashMap<String, Object> params : listOfElectroDevicesParams){
-            ElectroDevice device = factory.getElectroDevice((TypesOfDevice) params.get("type"),params);
+            Appliance device = factory.getElectroDevice((TypesOfDevice) params.get("type"),params);
             devices.add(device);
         }
 
