@@ -1,4 +1,4 @@
-package by.zhigarev.entity.enums;
+package by.zhigarev.entity;
 
 public enum TypesOfDevice {
     Laptop,

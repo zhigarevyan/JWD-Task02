@@ -34,7 +34,7 @@ public class Oven extends KitchenDevice {
                 "capacity=" + capacity +
                 ", depth=" + depth +
                 ", height=" + super.getHeight() +
-                ", powerConsumption=" + super.getPower_consumption() +
+                ", powerConsumption=" + super.getPowerConsumption() +
                 ", weight=" + super.getWeight() +
                 ", width=" + super.getWidth() +
                 '}';

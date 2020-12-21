@@ -1,14 +1,25 @@
 package by.zhigarev.entity;
 
-import by.zhigarev.entity.enums.TypesOfDevice;
 import by.zhigarev.entity.impl.*;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class Factory {
 
+    public List<Appliance> getApplianceList(List<Map<String,Object>> applianceParamsList){
+        List<Appliance> devices = new ArrayList<>();
 
-    public Appliance getElectroDevice(TypesOfDevice type, HashMap<String, Object> params) {
+        for(Map<String, Object> params : applianceParamsList){
+            Appliance device = getElectroDevice((TypesOfDevice) params.get("type"),params);
+            devices.add(device);
+        }
+        return devices;
+    }
+
+    public Appliance getElectroDevice(TypesOfDevice type, Map<String, Object> params) {
         Appliance returnValue = null;
         switch (type) {
             case Laptop:

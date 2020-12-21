@@ -1,15 +1,15 @@
 package by.zhigarev.dao;
 
-import by.zhigarev.dao.impl.AppliaceDAOImpl;
+import by.zhigarev.dao.impl.ApplianceDAOImpl;
 
 public class DAOFactory {
     private static final DAOFactory instance = new DAOFactory();
 
-    private final AppliaceDAO applianceDAO = new AppliaceDAOImpl();
+    private final ApplianceDAO applianceDAO = new ApplianceDAOImpl();
 
     private DAOFactory() {}
 
-    public AppliaceDAO getApplianceDAO() {
+    public ApplianceDAO getApplianceDAO() {
         return applianceDAO;
     }
 

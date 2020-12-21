@@ -1,24 +1,24 @@
 package by.zhigarev.entity;
 
-public class HomeDevice implements Appliance {
-    double power_consumption;
+public abstract class HomeDevice implements Appliance {
+    double powerConsumption;
 
-    public HomeDevice(double power_consumption) {
-        this.power_consumption = power_consumption;
+    public HomeDevice(double powerConsumption) {
+        this.powerConsumption = powerConsumption;
     }
 
-    public double getPower_consumption() {
-        return power_consumption;
+    public double getPowerConsumption() {
+        return powerConsumption;
     }
 
-    public void setPower_consumption(double power_consumption) {
-        this.power_consumption = power_consumption;
+    public void setPowerConsumption(double powerConsumption) {
+        this.powerConsumption = powerConsumption;
     }
 
     @Override
     public String toString() {
         return "HomeDevice{" +
-                "power_consumption=" + power_consumption +
+                "power_consumption=" + powerConsumption +
                 '}';
     }
 }

@@ -1,7 +1,7 @@
 package by.zhigarev.service.impl;
 
 import by.zhigarev.dao.DAOFactory;
-import by.zhigarev.dao.AppliaceDAO;
+import by.zhigarev.dao.ApplianceDAO;
 import by.zhigarev.entity.Appliance;
 import by.zhigarev.entity.criteria.Criteria;
 import by.zhigarev.service.ApplianceService;
@@ -19,7 +19,7 @@ public class ApplianceServiceImpl implements ApplianceService {
         }
 
         DAOFactory factory = DAOFactory.getInstance();
-        AppliaceDAO applianceDAO = factory.getApplianceDAO();
+        ApplianceDAO applianceDAO = factory.getApplianceDAO();
 
         List<Appliance> appliance = null;
         try {

@@ -1,8 +1,7 @@
 package by.zhigarev.entity;
 
-import java.util.Scanner;
 
-public class KitchenDevice extends HomeDevice{
+public abstract class KitchenDevice extends HomeDevice{
     private double weight;
     private double width;
     private double height;
@@ -44,7 +43,7 @@ public class KitchenDevice extends HomeDevice{
                 "weight=" + weight +
                 ", width=" + width +
                 ", height=" + height +
-                ", power_consumption=" + power_consumption +
+                ", power_consumption=" + powerConsumption +
                 '}';
     }
 }

@@ -6,6 +6,6 @@ import by.zhigarev.entity.criteria.Criteria;
 import java.io.IOException;
 import java.util.List;
 
-public interface AppliaceDAO {
+public interface ApplianceDAO {
     List<Appliance> find(Criteria criteria) throws IOException;
 }

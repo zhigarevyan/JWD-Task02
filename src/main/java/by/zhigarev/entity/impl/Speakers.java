@@ -3,48 +3,48 @@ package by.zhigarev.entity.impl;
 import by.zhigarev.entity.HomeDevice;
 
 public class Speakers extends HomeDevice {
-    private double number_of_speakers;
-    private String frequency_range;
-    private double cord_length;
+    private double numberOfSpeakers;
+    private String frequencyRange;
+    private double cordLength;
 
-    public Speakers(double powerConsumption, double number_of_speakers, String frequency_range, double cord_length) {
+    public Speakers(double powerConsumption, double numberOfSpeakers, String frequencyRange, double cordLength) {
         super(powerConsumption);
-        this.number_of_speakers = number_of_speakers;
-        this.frequency_range = frequency_range;
-        this.cord_length = cord_length;
+        this.numberOfSpeakers = numberOfSpeakers;
+        this.frequencyRange = frequencyRange;
+        this.cordLength = cordLength;
     }
 
-    public double getNumber_of_speakers() {
-        return number_of_speakers;
+    public double getNumberOfSpeakers() {
+        return numberOfSpeakers;
     }
 
-    public void setNumber_of_speakers(double number_of_speakers) {
-        this.number_of_speakers = number_of_speakers;
+    public void setNumberOfSpeakers(double numberOfSpeakers) {
+        this.numberOfSpeakers = numberOfSpeakers;
     }
 
-    public String getFrequency_range() {
-        return frequency_range;
+    public String getFrequencyRange() {
+        return frequencyRange;
     }
 
-    public void setFrequency_range(String frequency_range) {
-        this.frequency_range = frequency_range;
+    public void setFrequencyRange(String frequencyRange) {
+        this.frequencyRange = frequencyRange;
     }
 
 
-    public double getCord_length() {
-        return cord_length;
+    public double getCordLength() {
+        return cordLength;
     }
 
-    public void setCord_length(double cord_length) {
-        this.cord_length = cord_length;
+    public void setCordLength(double cordLength) {
+        this.cordLength = cordLength;
     }
 
     @Override
     public String toString() {
         return "Speakers{" +
-                "number_of_speakers=" + number_of_speakers +
-                ", frequency_range='" + frequency_range + '\'' +
-                ", cord_length=" + cord_length +
+                "number_of_speakers=" + numberOfSpeakers +
+                ", frequency_range='" + frequencyRange + '\'' +
+                ", cord_length=" + cordLength +
                 super.toString()+
                 '}';
     }

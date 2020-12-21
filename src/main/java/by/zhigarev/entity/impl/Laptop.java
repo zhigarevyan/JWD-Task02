@@ -2,17 +2,15 @@ package by.zhigarev.entity.impl;
 
 import by.zhigarev.entity.WorkDevice;
 
-import java.io.Serializable;
-
 public class Laptop extends WorkDevice {
     private String os;
-    private double system_memory;
+    private double systemMemory;
     private double cpu;
 
-    public Laptop(double batteryCapacity, double memoryRom, double displayInches, String os, double system_memory, double cpu) {
+    public Laptop(double batteryCapacity, double memoryRom, double displayInches, String os, double systemMemory, double cpu) {
         super(batteryCapacity, memoryRom, displayInches);
         this.os = os;
-        this.system_memory = system_memory;
+        this.systemMemory = systemMemory;
         this.cpu = cpu;
     }
 
@@ -24,12 +22,12 @@ public class Laptop extends WorkDevice {
         this.os = os;
     }
 
-    public double getSystem_memory() {
-        return system_memory;
+    public double getSystemMemory() {
+        return systemMemory;
     }
 
-    public void setSystem_memory(double system_memory) {
-        this.system_memory = system_memory;
+    public void setSystemMemory(double systemMemory) {
+        this.systemMemory = systemMemory;
     }
 
     public double getCpu() {
@@ -44,11 +42,11 @@ public class Laptop extends WorkDevice {
     public String toString() {
         return "Laptop{" +
                 "os=" + os +
-                ", systemMemory=" + system_memory +
+                ", systemMemory=" + systemMemory +
                 ", cpu=" + cpu +
-                ", battery capacity=" + super.getBattery_capacity() +
-                ", displayInches=" + super.getDisplay_inches() +
-                ", MemoryRom=" + super.getMemory_rom() +
+                ", battery capacity=" + super.getBatteryCapacity() +
+                ", displayInches=" + super.getDisplayInches() +
+                ", MemoryRom=" + super.getMemoryRom() +
                 '}';
     }
 }
